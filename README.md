@@ -42,8 +42,8 @@ dependencies {
 2-Create your spinner item layout for view (I am using databinding and viewbinding)
 
   test_spiniy_item in layout folder from our sample project you can copy and paste then build it
+
   ```
-  
   ```
 3-Create adapter extends from SpiniyAdapter
 
@@ -68,7 +68,8 @@ public class TestAdapter extends SpiniyAdapter<Test> {
 
 }
 
-     ```
+  ```
+  ```
  4-In your acitivity or fragment implements ISpiniy<Test> than initialize it
  
     private ArrayList<Test> testArrayList;
@@ -87,14 +88,15 @@ public class TestAdapter extends SpiniyAdapter<Test> {
         binding.spiniy.setISpiniy(this);
 
 ```
-
   ```
+
 //This methode will be triggered after selection
    @Override
     public void onSpiniySelectedItem(Test item, int position) {
         Log.d(TAG, "onSpiniySelectedItem: " + item.toString());
 
     }
-    
+    ```
+  ```
  I am strongly recommending to you looking for sample project. It is basic and understable   
   ```
