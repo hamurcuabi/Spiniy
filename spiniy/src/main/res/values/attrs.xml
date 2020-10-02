@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="Spiniy">
-        <attr name="spiniy_popbackground" format="color" />
+        <attr name="spiniy_popbackground" format="integer" />
         <attr name="spiniy_mode" format="enum">
-            <enum name="Dialog" value="0" />
+            <enum name="Dropdown" value="0" />
             <enum name="Popup" value="1" />
         </attr>
     </declare-styleable>
