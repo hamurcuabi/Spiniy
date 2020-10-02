@@ -30,11 +30,4 @@ public class Test implements BaseModel {
         this.id = id;
     }
 
-    @Override
-    public String toString() {
-        return "Test{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                '}';
-    }
 }

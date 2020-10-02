@@ -2,7 +2,6 @@ package com.emrhmrc.customspinner;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -38,7 +37,8 @@ public class MainActivity extends AppCompatActivity implements ISpiniy<Test> {
 
     @Override
     public void onSpiniySelectedItem(Test item, int position) {
-        Log.d(TAG, "onSpiniySelectedItemPositon: " + position);
-        Toast.makeText(this, item.toString(), Toast.LENGTH_LONG).show();
+        Log.d(TAG, "onSpiniySelectedItem: " + item.toString());
+
     }
+
 }

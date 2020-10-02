@@ -2,7 +2,6 @@ package com.emrhmrc.spiniy.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,10 +9,10 @@ import android.widget.AdapterView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.emrhmrc.spiniy.helper.BaseModel;
-import com.emrhmrc.spiniy.helper.ISpiniy;
 import com.emrhmrc.spiniy.adapter.SpiniyAdapter;
 import com.emrhmrc.spiniy.databinding.SpiniyLayoutBinding;
+import com.emrhmrc.spiniy.helper.BaseModel;
+import com.emrhmrc.spiniy.helper.ISpiniy;
 
 /**
  * Created by hamurcuabi on 02,October,2020
@@ -61,13 +60,12 @@ public class Spiniy extends BaseWidget implements AdapterView.OnItemSelectedList
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        if(iSpiniy!=null)
-        iSpiniy.onSpiniySelectedItem((BaseModel) adapterView.getSelectedItem(),i);
+        if (iSpiniy != null)
+            iSpiniy.onSpiniySelectedItem((BaseModel) adapterView.getSelectedItem(), i);
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
-
     }
 
     public void setISpiniy(ISpiniy iSpiniy) {

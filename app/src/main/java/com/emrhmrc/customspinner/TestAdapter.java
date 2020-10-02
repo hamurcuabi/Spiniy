@@ -19,6 +19,7 @@ public class TestAdapter extends SpiniyAdapter<Test> {
         super(context, list);
     }
 
+    //id of your layout
     @Override
     public int setItemLayout() {
         return R.layout.test_spiniy_item;
