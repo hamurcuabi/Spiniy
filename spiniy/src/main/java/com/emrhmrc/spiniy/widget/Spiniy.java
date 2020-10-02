@@ -1,6 +1,7 @@
 package com.emrhmrc.spiniy.widget;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +10,12 @@ import android.widget.AdapterView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.emrhmrc.spiniy.R;
 import com.emrhmrc.spiniy.adapter.SpiniyAdapter;
 import com.emrhmrc.spiniy.databinding.SpiniyLayoutBinding;
 import com.emrhmrc.spiniy.helper.BaseModel;
 import com.emrhmrc.spiniy.helper.ISpiniy;
+import com.emrhmrc.spiniy.helper.SpiniyMode;
 
 /**
  * Created by hamurcuabi on 02,October,2020
@@ -50,6 +53,17 @@ public class Spiniy extends BaseWidget implements AdapterView.OnItemSelectedList
     public void initView(Context context, AttributeSet attrs) {
         this.context = context;
         binding = SpiniyLayoutBinding.inflate(LayoutInflater.from(getContext()), this, true);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.Spiniy, 0, 0);
+        try {
+            int background = ta.getColor(R.styleable.Spiniy_spiniy_popbackground, 0);
+            SpiniyMode spiniyMode = SpiniyMode.values()[ta.getInt(R.styleable.Spiniy_spiniy_mode, 0)];
+            if (background != 0) {
+                //TODO
+                //  binding.spiniy.setPopupBackgroundResource(background);
+            }
+        } finally {
+            ta.recycle();
+        }
     }
 
     public void initialSpiniy(SpiniyAdapter adapter) {
@@ -71,4 +85,6 @@ public class Spiniy extends BaseWidget implements AdapterView.OnItemSelectedList
     public void setISpiniy(ISpiniy iSpiniy) {
         this.iSpiniy = iSpiniy;
     }
+
+
 }
