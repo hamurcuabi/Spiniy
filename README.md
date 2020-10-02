@@ -1,10 +1,11 @@
-# Spiniy
-The easiest way to use custom spinner !
 
-You can use your own classes and item layouts with databinding!
-
-
+# Spiniy 
 ![spiniy](https://user-images.githubusercontent.com/23655824/94928501-72c0a780-04cc-11eb-8f21-6fbc0922c988.png)
+
+# The easiest way to use custom spinner !
+# You can use your own classes and item layouts with databinding!
+
+
 ## Prerequisites
 
 Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
@@ -85,8 +86,9 @@ public class TestAdapter extends SpiniyAdapter<Test> {
         binding.spiniy.initialSpiniy(testAdapter);
         binding.spiniy.setISpiniy(this);
 
+```
 
-
+  ```
 //This methode will be triggered after selection
    @Override
     public void onSpiniySelectedItem(Test item, int position) {
