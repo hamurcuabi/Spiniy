@@ -1,7 +1,7 @@
 
 # Spiniy 
 ![spiniy](https://user-images.githubusercontent.com/23655824/94928501-72c0a780-04cc-11eb-8f21-6fbc0922c988.png)
-
+[![](https://jitpack.io/v/hamurcuabi/Spiniy.svg)](https://jitpack.io/#hamurcuabi/Spiniy)
 # The easiest way to use custom spinner !
 # You can use your own classes and item layouts with databinding!
 
