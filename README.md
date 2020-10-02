@@ -2,8 +2,8 @@
 # Spiniy 
 ![spiniy](https://user-images.githubusercontent.com/23655824/94928501-72c0a780-04cc-11eb-8f21-6fbc0922c988.png)
 [![](https://jitpack.io/v/hamurcuabi/Spiniy.svg)](https://jitpack.io/#hamurcuabi/Spiniy)
-# The easiest way to use custom spinner !
-# You can use your own classes and item layouts with databinding!
+## The easiest way to use custom spinner !
+## You can use your own classes and item layouts with databinding!
 
 
 ## Prerequisites
@@ -98,5 +98,32 @@ public class TestAdapter extends SpiniyAdapter<Test> {
     }
     ```
   ```
- I am strongly recommending to you looking for sample project. It is basic and understable   
+## Features
+
+You can set background and spinner mode from xml attr
+```
+app:spiniy_popbackground="@drawable/ic_launcher_background"
+        app:spiniy_mode="Popup"
+
   ```
+ You have to use Databinding in your spiner item layout like below
+   ```
+ <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="test"
+            type="com.emrhmrc.customspinner.Test" />
+
+    </data>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@{String.valueOf(test.id)}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+	  
+
