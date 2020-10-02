@@ -1,0 +1,3 @@
+include ':spiniy'
+include ':app'
+rootProject.name = "CustomSpinner"
