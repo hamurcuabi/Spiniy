@@ -1,9 +1,11 @@
 
-# Spiniy 
+## Spiniy   
 ![spiniy](https://user-images.githubusercontent.com/23655824/94928501-72c0a780-04cc-11eb-8f21-6fbc0922c988.png)
 [![](https://jitpack.io/v/hamurcuabi/Spiniy.svg)](https://jitpack.io/#hamurcuabi/Spiniy)
-## The easiest way to use custom spinner !
-## You can use your own classes and item layouts with databinding!
+
+
+ The easiest way to use custom spinner !
+ You can use your own classes and item layouts with databinding!
 
 
 ## Prerequisites
@@ -126,4 +128,19 @@ app:spiniy_popbackground="@drawable/ic_launcher_background"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp" />
 	  
+```
+## Warning
 
+! Use viewbinding, databinding , Java 1.8
+```
+compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    viewBinding {
+        enabled = true
+    }
+    dataBinding {
+        enabled = true
+    }
