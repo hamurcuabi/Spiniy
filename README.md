@@ -44,7 +44,24 @@ dependencies {
 2-Create your spinner item layout for view (I am using databinding and viewbinding)
 
   test_spiniy_item in layout folder from our sample project you can copy and paste then build it
+  
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+ <data>
+
+     <variable
+         name="test"
+         type="com.emrhmrc.customspinner.Test" />
+
+ </data>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:text="@{String.valueOf(test.id)}"
+         android:textColor="@color/colorPrimaryDark"
+         android:textSize="18sp" />
   ```
   ```
 3-Create adapter extends from SpiniyAdapter
@@ -104,31 +121,10 @@ public class TestAdapter extends SpiniyAdapter<Test> {
 
 You can set background and spinner mode from xml attr
 ```
-app:spiniy_popbackground="@drawable/ic_launcher_background"
+        app:spiniy_popbackground="@drawable/ic_launcher_background"
         app:spiniy_mode="Popup"
 
   ```
- You have to use Databinding in your spiner item layout like below
-   ```
- <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <data>
-
-        <variable
-            name="test"
-            type="com.emrhmrc.customspinner.Test" />
-
-    </data>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@{String.valueOf(test.id)}"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp" />
-	  
-```
 ## Warning
 
 ! Use viewbinding, databinding , Java 1.8
