@@ -28,7 +28,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	implementation 'com.github.hamurcuabi:Spiniy:VERSION'
+	implementation 'com.github.hamurcuabi:Spiniy:1.2'
 	 
 
 }
@@ -43,7 +43,7 @@ dependencies {
 ```
 2-Create your spinner item layout for view (I am using databinding and viewbinding)
 
-  test_spiniy_item in layout folder from our sample project you can copy and paste then build it
+  test_spiniy_item in layout folder from our sample project
   
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
@@ -104,6 +104,7 @@ public class TestAdapter extends SpiniyAdapter<Test> {
      // set adapter
         testAdapter = new TestAdapter(this, testArrayList);
         binding.spiniy.initialSpiniy(testAdapter);
+   // set listener	
         binding.spiniy.setISpiniy(this);
 
 ```
